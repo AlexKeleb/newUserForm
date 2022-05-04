@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,35 @@
   <title>newUserForm</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  
+  <section class="form-block"></section>
+  <h1 class="main-title">Registration form</h1>
+  <p class="main-title-subtitile">Пожалуйста, заполните форму ниже</p>
+
+  <form action="#" method="get" class="main-form form">
+
+    <!-- !лейблы не работают! -->
+    <label for="field-name">Имя:</label>
+    <input type="text" name="field-name" placeholder="Ваше имя" required>
+    <label for="field-surname">Фамилия:</label>
+    <input type="text" name="field-surname" placeholder="Ваша фамилия" required>
+    <label for="field-birthday">День рождения:</label>
+    <input type="date" name="field-birthday" placeholder="Дата вашего дня рождения" required>
+    <label for="field-email">Email:</label>
+    <input type="email" name="field-email" placeholder="Ваш email" required>
+    <label for="field-password">Пароль:</label>
+    <input type="password" name="field-password" placeholder="Придумайте пароль" required>
+    <label for="field-password-repeat">Повторите пароль:</label>
+    <input type="password" name="field-password-repeat" placeholder="Повторите пароль" required>
+
+    <button type="submit">Зарегистрировать нового пользователя</button>
+
+  </form>
 
 
 
-  
   <script src="js/script.js"></script>
 </body>
+
 </html>
