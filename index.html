@@ -6,36 +6,54 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>newUserForm</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <section class="form-block"></section>
-  <h1 class="main-title">Registration form</h1>
-  <p class="main-title-subtitile">Пожалуйста, заполните форму ниже</p>
+  <div class="wrapper">
 
-  <form action="#" method="get" class="main-form form">
+    <header class="main-header">
+      <p>тут header</p>
+    </header>
 
-    <!-- !лейблы не работают! -->
-    <label for="field-name">Имя:</label>
-    <input type="text" name="field-name" placeholder="Ваше имя" required>
-    <label for="field-surname">Фамилия:</label>
-    <input type="text" name="field-surname" placeholder="Ваша фамилия" required>
-    <label for="field-birthday">День рождения:</label>
-    <input type="date" name="field-birthday" placeholder="Дата вашего дня рождения" required>
-    <label for="field-email">Email:</label>
-    <input type="email" name="field-email" placeholder="Ваш email" required>
-    <label for="field-password">Пароль:</label>
-    <input type="password" name="field-password" placeholder="Придумайте пароль" required>
-    <label for="field-password-repeat">Повторите пароль:</label>
-    <input type="password" name="field-password-repeat" placeholder="Повторите пароль" required>
+    <main class="main-content">
 
-    <button type="submit">Зарегистрировать нового пользователя</button>
+      <section class="form-section">
+        <h1 class="main-title">Registration form</h1>
+        <p class="main-title-subtitile">Пожалуйста, заполните форму ниже</p>
 
-  </form>
+        <form action="#" method="get" class="main-form form" id="registeredForm">
+          <label for="fieldName">Имя:</label>
+          <input type="text" name="field-name" id="fieldName" placeholder="Ваше имя" required>
 
+          <label for="fieldSurname">Фамилия:</label>
+          <input type="text" name="field-surname" id="fieldSurname" placeholder="Ваша фамилия" required>
 
+          <label for="fieldBirthday">День рождения:</label>
+          <input type="date" name="field-birthday" id="fieldBirthday" placeholder="Дата вашего дня рождения" required>
 
+          <label for="fieldEmail">Email:</label>
+          <input type="email" name="field-email" id="fieldEmail" placeholder="Ваш email" required>
+
+          <label for="fieldPassword">Пароль:</label>
+          <input type="password" name="field-password" id="fieldPassword" placeholder="Придумайте пароль" required>
+
+          <label for="fieldPasswordRepeat">Повторите пароль:</label>
+          <input type="password" name="field-password-repeat" id="fieldPasswordRepeat" placeholder="Повторите пароль"
+            required>
+
+          <button type="submit">Зарегистрировать нового пользователя</button>
+        </form>
+      </section>
+
+    </main>
+
+    <footer class="main-footer">
+      <p>тут footer</p>
+    </footer>
+
+  </div>
   <script src="js/script.js"></script>
 </body>
 
