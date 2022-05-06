@@ -40,7 +40,7 @@ body {
 body {
   max-width: 1920px;
   min-width: 320px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 input,
@@ -79,6 +79,43 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: 400;
+}
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ccc;
+  box-shadow: 0 2px #ccc;
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  touch-action: manipulation;
+  vertical-align: top;
+}
+.btn:hover {
+  background-color: darkgrey;
+}
+.btn:active {
+  background-color: darkgrey !important;
+}
+.btn:focus-visible {
+  box-shadow: 0 0 0 3px lightskyblue;
+}
+.btn:disabled {
+  background-color: #6c87b5;
+  pointer-events: none;
 }
 /* --- общие стили --- */
 .wrapper {
@@ -136,15 +173,21 @@ h6 {
   margin-bottom: 30px;
 }
 
+.main-form label {
+  margin-bottom: 5px;
+  padding-left: 15px;
+}
+
 .main-form input {
-  background-color: rgba(135, 123, 123, 0.5);
+  color: #fff;
+  text-shadow: 1px 1px 1px #ccc;
+  background-color: rgba(135, 130, 130, 0.5);
   border-radius: 15px;
   padding: 10px 15px;
   width: 100%;
 }
 
-.main-form input::placeholder,
-.main-form input[type="date"]::placeholder {
+.main-form input::placeholder {
   color: rgba(242, 237, 237, 1);
 }
 
@@ -153,7 +196,7 @@ h6 {
 }
 
 .main-footer {
-  background-color: violet;
+  background-color: brown;
   padding: 20px;
   text-align: center;
   opacity: 0.5;
