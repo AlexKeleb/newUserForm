@@ -19,79 +19,41 @@
 
     <!-- TODO потом убрать инлайновый стиль -->
     <main class="main" style="display: flex; justify-content: center; padding: 20px">
-
-      <form class="main-form" action="#" name="mainForm" novalidate>
-
-        <!-- ! autocomplete глючит -->
-        <div class="form__group">
-          <label for="nameField">Name</label>
-          <input class="input input-name" id="nameField" type="text" name="name" placeholder="Name" autocomplete="off">
-          <div class="error"></div>
-        </div>
-
-        <div class="form__group">
-          <label for="lastnameField">Last name</label>
-          <input class="input input-lastname" id="lastnameField" type="text" name="lastName" placeholder="Last name">
-          <div class="error"></div>
-        </div>
-
-        <div class="form__group">
-          <label for="birthdayField">Birthday</label>
-          <input class="input input-birthday" id="birthdayField" type="text" name="birthday" placeholder="Birthday">
-          <div class="error"></div>
-        </div>
-
-        <div class="form__group">
-          <label for="emeilField">Email</label>
-          <input class="input input-email" id="emeilField" type="email" name="email" placeholder="Email">
-          <div class="error"></div>
-        </div>
-
-        <div class="form__group">
-          <label for="phoneField">Phone</label>
-          <input class="input input-phone" id="phoneField" type="tel" name="phone" placeholder="Phone">
-          <div class="error"></div>
-        </div>
-
-        <div class="form__group">
-          <label for="passwordField">Password</label>
-          <input class="input input-password" id="passwordField" type="password" name="password" placeholder="Password"
-            autocomplete="no">
-          <div class="error"></div>
-        </div>
-
-        <div class="form__group">
-          <label for="passwordRepeatField">Password repeat</label>
-          <input class="input input-password-repeat" id="passwordRepeatField" type="password" name="passwordRepeat"
-            placeholder="Password repeat" autocomplete="no">
-          <div class="error"></div>
-        </div>
-
-        <div class="form__group">
-          <input class="form-checkbox" type="checkbox" id="checkbox">
-          <label for="checkbox">checkbox</label>
-          <div class="error"></div>
-        </div>
-
-        <button class="btn" type="submit">
-          Submit form
-        </button>
-      </form>
-
-
-
-
-    </main>
-
-
-    <!-- <form class="form-with-validation" action="#">
+      <form class="form-with-validation" action="#">
 
         <div>
           <div>
-            <label for="">From:</label>
+            <label for="">Name:</label>
           </div>
           <div>
-            <input class="from field" type="text">
+            <input class="name field" type="text">
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <label for="">Surname:</label>
+          </div>
+          <div>
+            <input class="surname field" type="text">
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <label for="">Birthday:</label>
+          </div>
+          <div>
+            <input class="birthday field" type="text">
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <label for="">Email:</label>
+          </div>
+          <div>
+            <input class="email field" type="text">
           </div>
         </div>
 
@@ -113,33 +75,10 @@
           </div>
         </div>
 
-        <div>
-          <div>
-            <label for="">Where:</label>
-          </div>
-          <div>
-            <select class="where field" name="">
-              <option value=""></option>
-              <option value="developers">Developers</option>
-              <option value="managers">Managers</option>
-              <option value="devops">DevOps</option>
-            </select>
-          </div>
-        </div>
-
-        <div>
-          <div>
-            <label for="">Message:</label>
-          </div>
-          <div>
-            <textarea class="message field" name=""></textarea>
-          </div>
-        </div>
-
         <input class="validate-btn" id="validate" type="submit">
 
-      </form> -->
-
+      </form>
+    </main>
 
 
     <!-- делал по курсу -->
@@ -239,8 +178,7 @@
 
   </div>
   <!-- <script src="js/script.js"></script> -->
-  <!-- <script src="js/myScript.js"></script> -->
-  <script src="js/validationForm.js"></script>
+  <script src="js/myScript.js"></script>
 </body>
 
 </html>

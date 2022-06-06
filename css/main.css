@@ -10,7 +10,7 @@
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :focus,
@@ -42,7 +42,7 @@ body {
 body {
   max-width: 1920px;
   min-width: 320px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(80, 80, 80, 0.3);
 }
 
 input,
@@ -94,10 +94,10 @@ h6 {
 .btn {
   display: inline-block;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
   outline: none;
   border: none;
   border-radius: 4px;
@@ -107,19 +107,19 @@ h6 {
   font-weight: 500;
   text-decoration: none;
   color: #fff;
-  background-color: #ccc;
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 2px #ccc;
-          box-shadow: 0 2px #ccc;
+  box-shadow: 0 2px #ccc;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   -ms-touch-action: manipulation;
-      touch-action: manipulation;
+  touch-action: manipulation;
   vertical-align: top;
 }
 
@@ -133,7 +133,7 @@ h6 {
 
 .btn:focus-visible {
   -webkit-box-shadow: 0 0 0 3px lightskyblue;
-          box-shadow: 0 0 0 3px lightskyblue;
+  box-shadow: 0 0 0 3px lightskyblue;
 }
 
 .btn:disabled {
@@ -149,8 +149,8 @@ h6 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .main-header {
@@ -162,18 +162,18 @@ h6 {
 
 .main-content {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .form-section {
@@ -182,7 +182,7 @@ h6 {
   padding: 15px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 1px 1px 1px 1px #ccc;
-          box-shadow: 1px 1px 1px 1px #ccc;
+  box-shadow: 1px 1px 1px 1px #ccc;
   background-color: #fff;
   border-radius: 15px;
   display: -webkit-box;
@@ -190,11 +190,11 @@ h6 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .main-form {
@@ -203,12 +203,12 @@ h6 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 80%;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 20%;
 }
 
 .main-title {
@@ -225,18 +225,26 @@ h6 {
   margin-bottom: 30px;
 }
 
-.main-form label {
+.form__group label {
   margin-bottom: 5px;
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
-.main-form input {
+.main-form label + input {
+  margin-top: 5px;
+}
+
+.form__group input {
   color: #fff;
-  text-shadow: 1px 1px 1px #ccc;
   background-color: rgba(135, 130, 130, 0.5);
   border-radius: 15px;
-  padding: 10px 15px;
+  padding: 5px 10px;
   width: 100%;
+}
+
+.form__group input#checkbox {
+  width: auto;
+  vertical-align: bottom;
 }
 
 .main-form input::-webkit-input-placeholder {
@@ -255,13 +263,16 @@ h6 {
   color: #f2eded;
 }
 
-.main-form label + input {
-  margin-bottom: 20px;
-}
-
 .main-footer {
   background-color: brown;
   padding: 20px;
   text-align: center;
   opacity: 0.5;
+}
+
+.error {
+  /* margin-bottom: 15px; */
+  padding: 0 5px;
+  height: 15px;
+  color: red;
 }
