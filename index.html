@@ -23,9 +23,10 @@
       <form class="main-form" action="#" name="mainForm" novalidate>
 
         <!-- ! autocomplete глючит -->
+        <!--  можно добавить title, но так не интересно -->
         <div class="form__group">
           <label for="nameField">Name</label>
-          <input class="input input-name" id="nameField" type="text" name="name" placeholder="Ilon" autocomplete="off">
+          <input class="input input-name" id="nameField" type="text" name="name" placeholder="Elon" autocomplete="off">
           <div class="error"></div>
         </div>
 
@@ -53,15 +54,14 @@
           <div class="error"></div>
         </div>
 
-        <div class="form__group ">
+        <div class="form__group form__group-password">
           <label for="passwordField">Password</label>
           <input class="input input-password password" id="passwordField" type="password" name="password"
             placeholder="********" autocomplete="no">
-          
           <div class="error"></div>
         </div>
 
-        <div class="form__group">
+        <div class="form__group form__group-password">
           <label for="passwordRepeatField">Password repeat</label>
           <input class="input input-password-repeat" id="passwordRepeatField" type="password" name="passwordRepeat"
             placeholder="********" autocomplete="no">
