@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // находим поля с паролями
   const password = form.querySelector(".input-password");
   const passwordRepeat = form.querySelector(".input-password-repeat");
-  // находим глаз
-  const eyeSwitch = form.querySelector(".eye");
+  // находим коллекцию полей с паролями
+  const formGroupsPasswords = document.querySelectorAll(".form__group-password");
 
-  // создаем проверочную переменную
+  // создаем проверочную переменную для отправки формы
   let isValidate = false;
 
   // забиваем регулярки
@@ -20,6 +20,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const regExpPass = /^(?=.*[A-Z].*[A-Z])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$/; // (?=.*[!@#$&*])
   const regExpPhone = /^((\+?3|8)[ \-] ?)?((\(\d{3}\))|(\d{3}))?([ \-])?(\d{3}[\- ]?\d{2}[\- ]?\d{2})$/;
   const regExpDate = /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/;
+
+  // вешаем обработчик на каждый глаз и меняем тип пароля
+  function openOrHidePassword() {
+    for (let i = 0; i < formGroupsPasswords.length; i++) {
+      let eyeButton = formGroupsPasswords[i].querySelector(".eye");
+      let inputWithPassword = formGroupsPasswords[i].querySelector(".password-group");
+
+      eyeButton.addEventListener("click", () => {
+        if (eyeButton.classList.contains("eye--close")) {
+          eyeButton.classList.remove("eye--close");
+          eyeButton.classList.add("eye--open");
+          inputWithPassword.type = "text";
+        } else {
+          eyeButton.classList.remove("eye--open");
+          eyeButton.classList.add("eye--close");
+          inputWithPassword.type = "password";
+        }
+      });
+    }
+  }
 
   // фокус/блюр
   function focusAndBlur() {
@@ -87,8 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // TODO попробовать добавлять красный или зеленый бордер
   // валидируем каждое поле ввода
+  // ? надо как-то сократить, но работает, не хочется трогать
   function validateElem(elem) {
     if (elem.name === "name") {
       if (!regExpName.test(elem.value) && elem.value !== "") {
@@ -185,7 +205,6 @@ document.addEventListener("DOMContentLoaded", () => {
         submitButton.removeAttribute("disabled");
         elem.style.borderColor = "";
       }
-      //TODO надо на паcсворд прикрутить кнопку "показать пароль"
     }
     if (elem.name === "passwordRepeat") {
       if (password.value != passwordRepeat.value) {
@@ -200,22 +219,14 @@ document.addEventListener("DOMContentLoaded", () => {
         elem.nextElementSibling.innerHTML = "";
         isValidate = true;
         submitButton.removeAttribute("disabled");
-        elem.style.borderColor = "red";
+        elem.style.borderColor = "";
       }
     }
   }
+  // ! есть бажина: если пароли совпадают, то форма отправляется, ни смотря на то, что все остальные поля пустые
 
-  // показываем/скрываем пароль
-  // eyeSwitch.addEventListener("click", () => {
-  //   if ((password.type = "password")) {
-  //     password.type = "text";
-  //     eyeSwitch.url = "img/eye--close.svg";
-  //   }
-  //   if ((password.type = "text")) {
-  //     password.type = "text";
-  //     eyeSwitch.url = "img/eye--open.svg";
-  //   }
-  // });
+  // вешаем обработчик на каждый глаз и меняем тип пароля
+  openOrHidePassword();
 
   // если все валидно, отправляем форму
   function validateAndSubmit() {
@@ -256,4 +267,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// TODO как сохранять в массив?!
+// TODO как сохранять в массив?! (FormDATA?!)
+// ! Проверка на уникальность ХЗ (С помощью AJAX?!)

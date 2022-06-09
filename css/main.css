@@ -264,15 +264,6 @@ h6 {
   color: #f2eded;
 }
 
-.input-password {
-  position: relative;
-}
-
-.input-password::after {
-  position: absolute;
-  content: "a";
-}
-
 .main-form .btn {
   margin-top: 15px;
 }
@@ -291,22 +282,25 @@ h6 {
 }
 
 .eye {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-}
-
-.form__group-password {
   position: relative;
+  height: 0;
+  width: 100%;
 }
 
-.form__group-password:after {
+.eye::after {
   position: absolute;
-  top: 37%;
-  right: 2px;
   content: "";
+  top: 5px;
+  right: 2%;
   width: 20px;
   height: 20px;
-  background-image: url("../img/eye--open.svg");
   cursor: pointer;
+}
+
+.eye--open:after {
+  background-image: url("../img/eye--open.svg");
+}
+
+.eye--close:after {
+  background-image: url("../img/eye--close.svg");
 }
