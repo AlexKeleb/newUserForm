@@ -183,6 +183,8 @@ h6 {
 .form__group label {
   margin-bottom: 5px;
   padding-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .main-form label + input {
@@ -222,6 +224,7 @@ h6 {
 // TODO придумать как добавить поле инпуту
 .error {
   // border: 2px solid red;
+  margin-bottom: 5px;
   padding-left: 5px;
   height: 15px;
   color: red;

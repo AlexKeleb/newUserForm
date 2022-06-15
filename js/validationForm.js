@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
-  // ! есть бажина: если пароли совпадают, то форма отправляется, ни смотря на то, что все остальные поля пустые
+  // ! есть бажина: если пароли совпадают, то форма отправляется, ни смотря на то, что все остальные поля пустые или если пароли совпадают но не провалидированы
 
   // вешаем обработчик на каждый глаз и меняем тип пароля
   openOrHidePassword();
@@ -269,3 +269,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // TODO как сохранять в массив?! (FormDATA?!)
 // ! Проверка на уникальность ХЗ (С помощью AJAX?!)
+
+let save = function () {
+  let name = ;// get from document
+  let isNameValid = validateName(name);
+  
+  let email = ;// 
+  let phone =;//
+  
+  
+};
+
+let user = {};
+
+let userList = {};
